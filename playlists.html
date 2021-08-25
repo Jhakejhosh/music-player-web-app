@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App playlists</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="home">
+                <a href="index.html"><i class="fas fa-arrow-left"></i></a><p>Home</p>
+            </div>
+            <a href="favorite.html"><small>Download Tracks</small></a>
+            <div class="artist-album">
+                <p id="artist">Khalid</p>
+                <img width="50px" height="50px" id="header-img">
+            </div>
+        </header>
+
+        <!-----playlist content----->
+        <div class="playlist-content">
+            <header>
+                <div class="arrow-slide">
+                    <i class="fas fa-arrow-left"></i>  
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="volume">
+                    <p id="volume-no">90</p>
+                    <i class="fas fa-volume-up"></i>
+                    <input type="range" max="100" min="0" value="90" id="volumeChange">
+                </div>
+                <div class="playlist-slider">
+                    <small id="queue">List</small>
+                    <i class="fas fa-th-list" id="playlist"></i>
+                </div>
+            </header>
+
+            <div class="playlist-main">
+                <div class="playlist-upload">
+                    <div class="playlist-load">
+                        <img width="100%" height="400px" id="track-img">
+                        <button id="autoplay" onclick="autoPlay()">Autoplay <i class="fas fa-circle-notch"></i></button>
+                        <input type="range" max="100" min="0" value="0" id="duration" onchange="timerChange()">
+                        <div class="singer-text">
+                            <p id="song-title"></p>
+                            <small id="singer"></small>
+                        </div>
+                        <div class="upload-btn">
+                           <i class="fas fa-step-backward" id="backPlay" onclick="backPlay()"></i>
+                           <i class="fas fa-play" id="play"></i>
+                           <i class="fas fa-step-forward" id="frontPlay"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-------playlist right-------->
+                <div class="playlist-right" id="playlist-right">
+                    <h1>Top Tracks Playlist</h1>
+                    <i class="fas fa-chevron-down" id="downoff"></i>
+                    <small class="favbtn">Favorites</small>
+                    <ul class="tracks">
+                        <li>
+                            <div class="track-left">
+                                <img src="images/music lady.jpg" width="60px" height="60px">
+                                <div class="track-text">
+                                    <p id="songTitle">Feeling good</p>
+                                    <small id="trackArtist">Khalid</small>
+                                </div>
+                            </div>
+                            <i class="fas fa-play" id="play-list" onclick="play()"></i> 
+                        </li>
+
+                        <li>
+                            <div class="track-left">
+                                <img src="images/music guy.jpg" width="60px" height="60px">
+                                <div class="track-text">
+                                    <p id="songTitle">Kiss Daniel</p>
+                                    <small id="trackArtist">Loyal</small>
+                                </div>
+                            </div>
+                            <i class="fas fa-play" id="play-list" onclick="play()"></i> 
+                        </li>
+
+                        <li>
+                            <div class="track-left">
+                                <img src="images/jamaica.jpg" width="60px" height="60px">
+                                <div class="track-text">
+                                    <p id="songTitle">I'm not alone </p>
+                                    <small id="trackArtist">Alan Walker</small>
+                                </div>
+                            </div>
+                            <i class="fas fa-play" id="play-list" onclick="play()"></i> 
+                        </li>
+
+                        <li>
+                            <div class="track-left">
+                                <img src="images/cassette.jpg" width="60px" height="60px">
+                                <div class="track-text">
+                                    <p id="songTitle">Ase se</p>
+                                    <small id="trackArtist">Barry Jay</small>
+                                </div>
+                            </div>
+                            <i class="fas fa-play" id="play-list" onclick="play()"></i> 
+                        </li>
+
+                        <li>
+                            <div class="track-left">
+                                <img src="images/guitarist.jpg" width="60px" height="60px">
+                                <div class="track-text">
+                                    <p id="songTitle">I wanna marry</p>
+                                    <small id="trackArtist">Bruno mars</small>
+                                </div>
+                            </div>
+                            <i class="fas fa-play" id="play-list" onclick="play()"></i> 
+                        </li>
+
+                        <li>
+                            <div class="track-left">
+                                <img src="images/club bear.jpg" width="60px" height="60px">
+                                <div class="track-text">
+                                    <p id="songTitle">Can we kiss</p>
+                                    <small id="trackArtist">Saddist</small>
+                                </div>
+                            </div>
+                            <i class="fas fa-play" id="play-list" onclick="play()"></i> 
+                        </li>
+
+                        <li>
+                            <div class="track-left">
+                                <img src="images/feelingvibes.jpg" width="60px" height="60px">
+                                <div class="track-text">
+                                    <p id="songTitle">Feeling good</p>
+                                    <small id="trackArtist">Drake (feat. Future)</small>
+                                </div>
+                            </div>
+                            <i class="fas fa-play" id="play-list" onclick="play()"></i> 
+                        </li>
+
+                        <li>
+                            <div class="track-left">
+                                <img src="images/inspirit.jpg" width="60px" height="60px">
+                                <div class="track-text">
+                                    <p id="songTitle">Halleluyah</p>
+                                    <small id="trackArtist">Pentatonix</small>
+                                </div>
+                            </div>
+                            <i class="fas fa-play" id="play-list" onclick="play()"></i> 
+                        </li>
+
+                        <li>
+                            <div class="track-left">
+                                <img src="images/reading.jpg" width="60px" height="60px">
+                                <div class="track-text">
+                                    <p id="songTitle">Juliet & Romeo</p>
+                                    <small id="trackArtist">Jhonny Drille</small>
+                                </div>
+                            </div>
+                            <i class="fas fa-play" id="play-list" onclick="play()"></i> 
+                        </li>
+                    </ul>
+                </div>
+                <!---end------------>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>Designed and developed by JhakeJhosh <img src="images/emoji.png" width="30px"></p>
+    </footer>
+    <script src="playlist.js"></script>
+    
+</body>
+</html>
