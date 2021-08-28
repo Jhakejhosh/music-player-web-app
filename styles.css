@@ -32,7 +32,7 @@ footer{
     color: var(--text-color);
     background-color: var(--background-color);
     padding: 10px;
-    position: relative;  
+    position: relative; 
     overflow: hidden;
 }
 .container .logo {
@@ -701,7 +701,7 @@ marquee {
     }
     .container{
         width: 100%;
-        height: 150vh;
+        height: 170vh;
     }
     .text-content {
         margin: 40px 10px;
@@ -865,6 +865,10 @@ marquee {
     }
     .track-card {
         width: 170px;
+    }
+    footer {
+        font-size: 14px;
+        padding: 10px;
     }
 }
 
